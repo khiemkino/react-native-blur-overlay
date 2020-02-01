@@ -60,6 +60,7 @@ export default class BlurOverlay extends React.Component {
         emitter.on('drawer-close',this._closeOverlay);
     }
     componentWillUnmount(){
+        this.closeOverlay()
         emitter.off('drawer-open',this._openOverlay);
         emitter.off('drawer-close',this._closeOverlay);
     }
